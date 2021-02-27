@@ -24,53 +24,15 @@ enum custom_keycodes {
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   /* Default Layer
-   *  Master Side (USB Cable Connected Side)
    *  ,-------------------------------
-   *  |  Esc   F1   F2   F3   F4   F5 
-   *  | Hank    1    2    3    4    5 
-   *  |  Tab    Q    W    E    R    T 
-   *  | Caps    A    S    D    F    G 
-   *  | Shft    Z    W    C    V    B 
-   *  | Ctrl  GUI  Alt MHEN Spce Spce 
-   *  `-------------------------------
-   *  Slave Side (USB Cable Not Connected Side)
-   *  ,-------------------------------
-   *  |   F6   F7   F8   F9  F10  Del 
-   *  |    6    7    8    9    0   BS 
-   *  |    Y    U    I    O    P    \ 
-   *  |    H    J    K    L    ; Entr 
-   *  |    N    M    , Shft   Up MO(1)
-   *  | Spce  HEN  Alt Left Down Rght 
+   *  |  RGB_TOG,  KC_A,  RGB_MOD
    *  `-------------------------------
    */
 
   [0] = LAYOUT( /* Base */ 
-    RGB_TOG,  KC_A,     KC_B
+    RGB_TOG,  KC_A, RGB_MOD
   ),
 };
-
-//bool process_record_user(uint16_t keycode, keyrecord_t *record) {
-//  switch (keycode) {
-//    case SEND_00:
-//      if (record->event.pressed) {
-//        // when keycode SEND_00 is pressed
-//        SEND_STRING("00");
-//      } else {
-//        // when keycode SEND_00 is released
-//      }
-//      break;
-//    case SEND_000:
-//      if (record->event.pressed) {
-//        // when keycode SEND_000 is pressed
-//        //SEND_STRING("000" SS_TAP(X_ENTER));
-//        SEND_STRING("000");
-//      } else {
-//        // when keycode SEND_000 is released
-//      }
-//      break;
-//  }
-//  return true;
-//}
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   switch (keycode) {
